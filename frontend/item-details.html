@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details | Campus Lost & Found</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>Campus Lost & Found</h2>
+        <div>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="items.html">Browse Items</a>
+            <a href="my-claims.html">My Claims</a>
+        </div>
+    </nav>
+
+    <main class="details-container">
+
+        <h2>Item Details</h2>
+
+        <div id="itemDetails">
+            <p>Loading item details...</p>
+        </div>
+
+        <!-- Claim Form -->
+        <section id="claimSection" class="claim-card" hidden>
+
+            <h2>Claim This Item</h2>
+
+            <form id="claimForm">
+
+                <label for="claimMessage">
+                    Explain why this item belongs to you
+                </label>
+
+                <textarea
+                    id="claimMessage"
+                    name="message"
+                    placeholder="Enter your claim message"
+                    required
+                    minlength="10"
+                    maxlength="500"
+                    rows="5"
+                ></textarea>
+
+                <button type="submit">
+                    Submit Claim
+                </button>
+
+            </form>
+
+            <p id="claimMessageResult"
+               role="status"
+               aria-live="polite"></p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

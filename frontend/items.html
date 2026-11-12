@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Items - Campus Lost and Found</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>Campus Lost & Found</h2>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+    <main class="items-container">
+        <h1>Browse Lost and Found Items</h1>
+        <p>Search for items reported on campus.</p>
+
+        <div class="filter-container">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by item title or description"
+            >
+
+            <select id="typeFilter">
+                <option value="">All Types</option>
+                <option value="lost">Lost</option>
+                <option value="found">Found</option>
+            </select>
+
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Books">Books</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Documents">Documents</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <select id="statusFilter">
+                <option value="">All Statuses</option>
+                <option value="open">Open</option>
+                <option value="claimed">Claimed</option>
+                <option value="resolved">Resolved</option>
+            </select>
+
+            <button type="button" id="searchButton">Search</button>
+            <button type="button" id="clearButton">Clear Filters</button>
+        </div>
+
+        <p id="itemsMessage"></p>
+
+        <div id="itemsList" class="items-grid"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Item | Campus Lost & Found</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>Campus Lost & Found</h2>
+        <div>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="items.html">Browse Items</a>
+        </div>
+    </nav>
+
+    <main class="form-container">
+        <h2 id="reportHeading">Report Lost or Found Item</h2>
+
+        <form id="reportForm">
+
+            <input type="hidden" id="type" name="type" value="lost">
+
+            <label for="title">Item Title</label>
+            <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Example: Black College Bag"
+                required
+                minlength="3"
+                maxlength="100"
+            >
+
+            <label for="description">Description</label>
+            <textarea
+                id="description"
+                name="description"
+                placeholder="Describe the item in detail"
+                required
+                minlength="10"
+                maxlength="1000"
+                rows="5"
+            ></textarea>
+
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+                <option value="">Select a category</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Books">Books</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Documents">Documents</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="location">Location</label>
+            <input
+                type="text"
+                id="location"
+                name="location"
+                placeholder="Where was it lost or found?"
+                required
+                minlength="2"
+                maxlength="150"
+            >
+
+            <label for="date">Date</label>
+            <input
+                type="date"
+                id="date"
+                name="date"
+                required
+            >
+
+            <label for="imageUrl">Image URL (Optional)</label>
+            <input
+                type="url"
+                id="imageUrl"
+                name="imageUrl"
+                placeholder="https://example.com/image.jpg"
+            >
+
+            <button type="submit">Submit Report</button>
+        </form>
+
+        <p id="reportMessage" role="status" aria-live="polite"></p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
