@@ -1,5 +1,5 @@
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://campus-lost-and-found-portal-1-4bzy.onrender.com/api";
 
 // STUDENT REGISTRATION
 const registerForm = document.getElementById("registerForm");
